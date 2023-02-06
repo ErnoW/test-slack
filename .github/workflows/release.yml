@@ -18,31 +18,22 @@ jobs:
           payload: |
             {
               "text": "Deployment started (In Progress)",
-              "blocks": [
-              {
-                "type": "header",
-                "text": {
-                  "type": "plain_text",
-                  "text": "New Release"
-                }
-              },
-              {
-                "type": "section",
-                "text": {
-                  "type": "mrkdwn",
-                  "text": "Release started..."
-                }
-              }
-            ],
               "attachments": [
                 {
                   "pretext": "Deployment started",
                   "color": "dbab09",
                   "fields": [
                     {
+                      "type": "header",
+                      "text": {
+                        "type": "plain_text",
+                        "text": "New Release"
+                      }
+                    },
+                    {
                       "title": "Status",
                       "short": true,
-                      "value": "In Progress"
+                      "value": "Completed"
                     }
                   ]
                 }
@@ -69,18 +60,19 @@ jobs:
           update-ts: ${{ steps.slack.outputs.ts }}
           payload: |
             {
+              "text": "Deployment started (Finished)",
               "attachments": [
                 {
                   "pretext": "Deployment finished",
                   "color": "28a745",
                   "fields": [
-                                {
-                "type": "header",
-                "text": {
-                  "type": "plain_text",
-                  "text": "New Release"
-                }
-              },
+                    {
+                      "type": "header",
+                      "text": {
+                        "type": "plain_text",
+                        "text": "New Release"
+                      }
+                    },
                     {
                       "title": "Status",
                       "short": true,
