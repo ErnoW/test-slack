@@ -46,12 +46,10 @@ jobs:
                   "title_link": "https://api.slack.com/",
                   "text": "Optional text that appears within the attachment",
                   "pretext": "New release",
-                  "image_url": "https://global-uploads.webflow.com/6047a9e35e5dc54ac86ddd90/638a6194ac02047047945a9b_pZ-iqEC6Xt0fVckLLkQnzwG47FucYgZcR40kNapNxSA.png",
-                  "thumb_url": "https://global-uploads.webflow.com/6047a9e35e5dc54ac86ddd90/638a6194ac02047047945a9b_pZ-iqEC6Xt0fVckLLkQnzwG47FucYgZcR40kNapNxSA.png",
                   "footer": "Slack API",
                   "footer_icon": "https://platform.slack-edge.com/img/default_application_icon.png",
                   "color": "dbab09",
-                  "fields": [
+                  "blocks": [
                     {
                       "type": "section",
                         "text": {
