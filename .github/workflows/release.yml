@@ -12,7 +12,6 @@ jobs:
     steps:
       - name: Notify Slack
         id: slack
-        if: steps.changesets.outputs.published == 'true'
         uses: slackapi/slack-github-action@v1.23.0
         with:
           channel-id: 'updates'
