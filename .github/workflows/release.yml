@@ -14,46 +14,94 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.23.0
         with:
-          channel-id: 'C04CJTLP1AA'
+          channel-id: "C04CJTLP1AA"
           payload: |
+            {
+              "text": "Deployment started (In Progress)",
+              "blocks": [
+              {
+                "type": "header",
+                "text": {
+                  "type": "plain_text",
+                  "text": "New Release"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "Release started..."
+                }
+              },
+              {
+                "type": "button",
+                "text": {
+                  "type": "plain_text",
+                  "text": "Link Button"
+                },
+                "url": "https://api.slack.com/block-kit"
+              }
+            ],
+              "attachments": [
                 {
-                  "text": "Deployment started (In Progress)",
-                  "attachments": [
+                  "pretext": "Deployment started",
+                  "color": "dbab09",
+                  "fields": [
                     {
-                      "pretext": "Deployment started",
-                      "color": "dbab09",
-                      "fields": [
-                        {
-                          "title": "Status",
-                          "short": true,
-                          "value": "In Progress"
-                        }
-                      ]
+                      "title": "Status",
+                      "short": true,
+                      "value": "In Progress"
                     }
                   ]
                 }
-            # {
-            #   "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
-            #   "blocks": [
-            #     {
-            #       "type": "section",
-            #       "text": {
-            #         "type": "mrkdwn",
-            #         "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
-            #       }
-            #     }
-            #   ]
-            # }
+              ]
+            }
+          # {
+          #   "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
+          #   "blocks": [
+          #     {
+          #       "type": "section",
+          #       "text": {
+          #         "type": "mrkdwn",
+          #         "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+          #       }
+          #     }
+          #   ]
+          # }
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
       - name: Notify Slack 2
         uses: slackapi/slack-github-action@v1.23.0
         with:
-          channel-id: 'C04CJTLP1AA'
+          channel-id: "C04CJTLP1AA"
           update-ts: ${{ steps.slack.outputs.ts }}
           payload: |
             {
               "text": "Deployment finished (Completed)",
+                "blocks": [
+              {
+                "type": "header",
+                "text": {
+                  "type": "plain_text",
+                  "text": "New Release"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "Release started..."
+                }
+              },
+              {
+                "type": "button",
+                "text": {
+                  "type": "plain_text",
+                  "text": "Link Button"
+                },
+                "url": "https://api.slack.com/block-kit"
+              }
+            ],
               "attachments": [
                 {
                   "pretext": "Deployment finished",
