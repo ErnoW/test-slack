@@ -14,7 +14,7 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.23.0
         with:
-          channel-id: 'updates'
+          channel-id: 'C04CJTLP1AA'
           payload: |
                 {
                   "text": "Deployment started (In Progress)",
@@ -49,7 +49,7 @@ jobs:
       - name: Notify Slack 2
         uses: slackapi/slack-github-action@v1.23.0
         with:
-          channel-id: 'updates'
+          channel-id: 'C04CJTLP1AA'
           update-ts: ${{ steps.slack.outputs.ts }}
           payload: |
             {
