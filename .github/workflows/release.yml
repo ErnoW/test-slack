@@ -20,25 +20,25 @@ jobs:
              "text": "New Release (In progress...)",
               "attachments": [
                 {
-                  "fallback": "Plain-text summary of the attachment.",
-                  "title": "Slack API Documentation",
+                  "fallback": "New Release",
+                  "title": "New Release",
                   "title_link": "https://api.slack.com/",
                   "text": "Optional text that appears within the attachment",
                   "pretext": "New release",
                   "footer": "Slack API",
                   "footer_icon": "https://platform.slack-edge.com/img/default_application_icon.png",
                   "color": "dbab09",
-                  "fields": [
+                  "blocks": [
                     {
                       "type": "section",
-                        "text": {
+                      "text": {
                         "type": "mrkdwn",
-                        "text": "New Typescript SDK release!!\n- test\n* test\n• test"
+                        "text": "This is a section block with an accessory image."
                       },
                       "accessory": {
                         "type": "image",
-                        "image_url": "https://global-uploads.webflow.com/6047a9e35e5dc54ac86ddd90/638a6194ac02047047945a9b_pZ-iqEC6Xt0fVckLLkQnzwG47FucYgZcR40kNapNxSA.png",
-                        "alt_text": "Typescript"
+                        "image_url": "https://pbs.twimg.com/profile_images/625633822235693056/lNGUneLX_400x400.jpg",
+                        "alt_text": "cute cat"
                       }
                     }
                   ]
