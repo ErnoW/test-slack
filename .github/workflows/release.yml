@@ -69,28 +69,18 @@ jobs:
           update-ts: ${{ steps.slack.outputs.ts }}
           payload: |
             {
-              "text": "Deployment finished (Completed)",
-                "blocks": [
-              {
+              "attachments": [
+                {
+                  "pretext": "Deployment finished",
+                  "color": "28a745",
+                  "fields": [
+                                {
                 "type": "header",
                 "text": {
                   "type": "plain_text",
                   "text": "New Release"
                 }
               },
-              {
-                "type": "section",
-                "text": {
-                  "type": "mrkdwn",
-                  "text": "Release finished"
-                }
-              }
-            ],
-              "attachments": [
-                {
-                  "pretext": "Deployment finished",
-                  "color": "28a745",
-                  "fields": [
                     {
                       "title": "Status",
                       "short": true,
