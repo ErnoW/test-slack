@@ -42,9 +42,6 @@ jobs:
               "attachments": [
                 {
                   "fallback": "Plain-text summary of the attachment.",
-                  "author_name": "Bobby Tables",
-                  "author_link": "http://flickr.com/bobby/",
-                  "author_icon": "http://flickr.com/icons/bobby.jpg",
                   "title": "Slack API Documentation",
                   "title_link": "https://api.slack.com/",
                   "text": "Optional text that appears within the attachment",
@@ -53,46 +50,19 @@ jobs:
                   "thumb_url": "https://global-uploads.webflow.com/6047a9e35e5dc54ac86ddd90/638a6194ac02047047945a9b_pZ-iqEC6Xt0fVckLLkQnzwG47FucYgZcR40kNapNxSA.png",
                   "footer": "Slack API",
                   "footer_icon": "https://platform.slack-edge.com/img/default_application_icon.png",
-
                   "color": "dbab09",
                   "fields": [
                     {
                       "type": "section",
                         "text": {
                         "type": "mrkdwn",
-                        "text": "New Typescript SDK release!!\n- test\n- test"
+                        "text": "New Typescript SDK release!!\n- test\n* test\n• test"
                       },
                       "accessory": {
                         "type": "image",
                         "image_url": "https://global-uploads.webflow.com/6047a9e35e5dc54ac86ddd90/638a6194ac02047047945a9b_pZ-iqEC6Xt0fVckLLkQnzwG47FucYgZcR40kNapNxSA.png",
                         "alt_text": "Typescript"
                       }
-                    },
-                    {
-                      "type": "section",
-                      "text": {
-                        "type": "mrkdwn",
-                        "text": "<https://example.com|The Great Northern Hotel> :star::star::star::star:"
-                      },
-                      "accessory": {
-                        "type": "button",
-                        "text": {
-                          "type": "plain_text",
-                          "text": "View",
-                          "emoji": true
-                        },
-                        "value": "view_alternate_2"
-                      }
-                    },
-                    {
-                      "title": "Status",
-                      "short": true,
-                      "value": "In progress"
-                    },
-                    {
-                        "title": "Priority",
-                        "value": "High",
-                        "short": false
                     }
                   ]
                 }
@@ -154,3 +124,16 @@ jobs:
       #       }
       #   env:
       #     SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+
+
+                  
+                    # {
+                    #   "title": "Status",
+                    #   "short": true,
+                    #   "value": "In progress"
+                    # },
+                    # {
+                    #     "title": "Priority",
+                    #     "value": "High",
+                    #     "short": false
+                    # }
