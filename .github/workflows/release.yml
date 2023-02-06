@@ -18,27 +18,6 @@ jobs:
           payload: |
             {
              "text": "New Release (In progress...)",
-              "blocks": [
-                {
-                  "type": "header",
-                  "text": {
-                    "type": "plain_text",
-                    "text": "New Release"
-                  }
-                },
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "In progress..."
-                  },
-                  "accessory": {
-                    "type": "image",
-                    "image_url": "https://global-uploads.webflow.com/6047a9e35e5dc54ac86ddd90/638a6194ac02047047945a9b_pZ-iqEC6Xt0fVckLLkQnzwG47FucYgZcR40kNapNxSA.png",
-                    "alt_text": "Typescript"
-                  }
-                }
-              ],
               "attachments": [
                 {
                   "fallback": "Plain-text summary of the attachment.",
