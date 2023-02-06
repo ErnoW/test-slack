@@ -25,14 +25,13 @@ jobs:
                     "type": "plain_text",
                     "text": "New Release"
                   }
-                },
+                }
               ],
               "attachments": [
                 {
                   "pretext": "New release",
                   "color": "dbab09",
                   "fields": [
-  
                     {
                       "title": "Status",
                       "short": true,
@@ -59,14 +58,13 @@ jobs:
                     "type": "plain_text",
                     "text": "New Release"
                   }
-                },
+                }
               ],
               "attachments": [
                 {
                   "pretext": "New release",
                   "color": "28a745",
                   "fields": [
-
                     {
                       "title": "Status",
                       "short": true,
