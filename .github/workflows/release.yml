@@ -17,40 +17,31 @@ jobs:
           channel-id: "C04CJTLP1AA"
           payload: |
             {
-              "text": "Deployment started (In Progress)",
+             "text": "New Release (In progress...)",
+              "blocks": [
+                {
+                  "type": "header",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "New Release"
+                  }
+                },
+              ],
               "attachments": [
                 {
-                  "pretext": "Deployment started",
+                  "pretext": "New release",
                   "color": "dbab09",
                   "fields": [
-                    {
-                      "type": "header",
-                      "text": {
-                        "type": "plain_text",
-                        "text": "New Release"
-                      }
-                    },
+  
                     {
                       "title": "Status",
                       "short": true,
-                      "value": "Completed"
+                      "value": "In progress"
                     }
                   ]
                 }
               ]
             }
-          # {
-          #   "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
-          #   "blocks": [
-          #     {
-          #       "type": "section",
-          #       "text": {
-          #         "type": "mrkdwn",
-          #         "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
-          #       }
-          #     }
-          #   ]
-          # }
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
       - name: Notify Slack 2
@@ -60,23 +51,26 @@ jobs:
           update-ts: ${{ steps.slack.outputs.ts }}
           payload: |
             {
-              "text": "Deployment started (Finished)",
+              "text": "New Release (Finished)",
+              "blocks": [
+                {
+                  "type": "header",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "New Release"
+                  }
+                },
+              ],
               "attachments": [
                 {
-                  "pretext": "Deployment finished",
+                  "pretext": "New release",
                   "color": "28a745",
                   "fields": [
-                    {
-                      "type": "header",
-                      "text": {
-                        "type": "plain_text",
-                        "text": "New Release"
-                      }
-                    },
+
                     {
                       "title": "Status",
                       "short": true,
-                      "value": "Completed"
+                      "value": "Published"
                     }
                   ]
                 }
