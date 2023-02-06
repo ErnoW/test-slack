@@ -28,7 +28,7 @@ jobs:
                   "footer": "Slack API",
                   "footer_icon": "https://platform.slack-edge.com/img/default_application_icon.png",
                   "color": "dbab09",
-                  "blocks": [
+                  "fields": [
                     {
                       "type": "section",
                         "text": {
