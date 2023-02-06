@@ -83,7 +83,7 @@ jobs:
                         },
                         "value": "view_alternate_2"
                       }
-                    }
+                    },
                     {
                       "title": "Status",
                       "short": true,
@@ -100,57 +100,57 @@ jobs:
             }
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-      - name: Notify Slack 2
-        uses: slackapi/slack-github-action@v1.23.0
-        with:
-          channel-id: "C04CJTLP1AA"
-          update-ts: ${{ steps.slack.outputs.ts }}
-          payload: |
-            {
-              "text": "New Release (Finished)",
-              "blocks": [
-                {
-                  "type": "header",
-                  "text": {
-                    "type": "plain_text",
-                    "text": "New Release"
-                  }
-                },
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "New Typescript SDK release!!\n- test\n- test"
-                  },
-                  "accessory": {
-                    "type": "image",
-                    "image_url": "https://global-uploads.webflow.com/6047a9e35e5dc54ac86ddd90/638a6194ac02047047945a9b_pZ-iqEC6Xt0fVckLLkQnzwG47FucYgZcR40kNapNxSA.png",
-                    "alt_text": "Typescript"
-                  }
-                },
-                {
-                  "type": "context",
-                  "elements": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Cat* has approved this message."
-                    }
-                  ]
-                }
-              ],
-              "attachments": [
-                {
-                  "pretext": "New release",
-                  "color": "28a745",
-                  "fields": [
-                    {
-                      "title": "Status",
-                      "short": true,
-                      "value": "Published"
-                    }
-                  ]
-                }
-              ]
-            }
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      # - name: Notify Slack 2
+      #   uses: slackapi/slack-github-action@v1.23.0
+      #   with:
+      #     channel-id: "C04CJTLP1AA"
+      #     update-ts: ${{ steps.slack.outputs.ts }}
+      #     payload: |
+      #       {
+      #         "text": "New Release (Finished)",
+      #         "blocks": [
+      #           {
+      #             "type": "header",
+      #             "text": {
+      #               "type": "plain_text",
+      #               "text": "New Release"
+      #             }
+      #           },
+      #           {
+      #             "type": "section",
+      #             "text": {
+      #               "type": "mrkdwn",
+      #               "text": "New Typescript SDK release!!\n- test\n- test"
+      #             },
+      #             "accessory": {
+      #               "type": "image",
+      #               "image_url": "https://global-uploads.webflow.com/6047a9e35e5dc54ac86ddd90/638a6194ac02047047945a9b_pZ-iqEC6Xt0fVckLLkQnzwG47FucYgZcR40kNapNxSA.png",
+      #               "alt_text": "Typescript"
+      #             }
+      #           },
+      #           {
+      #             "type": "context",
+      #             "elements": [
+      #               {
+      #                 "type": "mrkdwn",
+      #                 "text": "*Cat* has approved this message."
+      #               }
+      #             ]
+      #           }
+      #         ],
+      #         "attachments": [
+      #           {
+      #             "pretext": "New release",
+      #             "color": "28a745",
+      #             "fields": [
+      #               {
+      #                 "title": "Status",
+      #                 "short": true,
+      #                 "value": "Published"
+      #               }
+      #             ]
+      #           }
+      #         ]
+      #       }
+      #   env:
+      #     SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
