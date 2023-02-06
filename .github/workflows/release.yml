@@ -32,14 +32,6 @@ jobs:
                   "type": "mrkdwn",
                   "text": "Release started..."
                 }
-              },
-              {
-                "type": "button",
-                "text": {
-                  "type": "plain_text",
-                  "text": "Link Button"
-                },
-                "url": "https://api.slack.com/block-kit"
               }
             ],
               "attachments": [
@@ -90,16 +82,8 @@ jobs:
                 "type": "section",
                 "text": {
                   "type": "mrkdwn",
-                  "text": "Release started..."
+                  "text": "Release finished"
                 }
-              },
-              {
-                "type": "button",
-                "text": {
-                  "type": "plain_text",
-                  "text": "Link Button"
-                },
-                "url": "https://api.slack.com/block-kit"
               }
             ],
               "attachments": [
